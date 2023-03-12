@@ -134,11 +134,11 @@ address {
 }
 
 .btn {
-  letter-spacing: 0.04em;
   font-family: inherit;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
+  letter-spacing: 0.04em;
   border-radius: 4px;
   border: none;
 }
@@ -187,13 +187,15 @@ address {
 }
 
 .menu-link {
+  position: relative;
+  display: block;
+
   color: inherit;
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-weight: 500;
-  display: block;
+
   padding: 24px 0;
-  position: relative;
 }
 
 .menu-link.current {
@@ -202,13 +204,14 @@ address {
 
 .menu-link.current::after {
   content: '';
+  position: absolute;
   display: block;
+  bottom: 0;
+
   width: 100%;
   height: 4px;
   background: var(--primary-color-accent);
   border-radius: 2px;
-  position: absolute;
-  bottom: 0;
 }
 
 .address-list {
@@ -239,14 +242,14 @@ address {
   padding-top: 188px;
   padding-bottom: 188px;
 
-  max-width: 1440px;
-  margin: 0 auto;
   background-image: linear-gradient(
       to right,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/hero/hero-bg.jpg);
+  max-width: 1440px;
+  margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
@@ -259,17 +262,19 @@ address {
   letter-spacing: 0.02em;
 
   text-align: center;
-  width: 496px;
-  margin-bottom: 48px;
   margin-left: auto;
   margin-right: auto;
+  width: 496px;
+  margin-bottom: 48px;
 }
 
 .hero-button {
   display: block;
   margin: 0 auto;
+
   background-color: var(--secondary-color-accent);
   color: var(--primary-text-color-dark-background);
+
   padding: 16px 32px;
   transition: background-color var(--transition-dur-and-func);
 }
@@ -299,11 +304,11 @@ address {
 
 .icons-advantages-border {
   display: flex;
-  background-color: var(--secondary-light-background);
-  width: 264px;
-  height: 112px;
   justify-content: center;
   align-items: center;
+  width: 264px;
+  height: 112px;
+  background-color: var(--secondary-light-background);
   border-radius: 4px;
   margin-bottom: 8px;
 }
@@ -355,12 +360,12 @@ address {
 
 .social-links-team {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: var(--secondary-color-accent);
-  align-items: center;
-  justify-content: center;
   transition: background-color var(--transition-dur-and-func);
 }
 
@@ -389,10 +394,10 @@ address {
 
 .customers-link {
   display: flex;
-  width: 168px;
-  height: 88px;
   align-items: center;
   justify-content: center;
+  width: 168px;
+  height: 88px;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   transition: border var(--transition-dur-and-func);
@@ -429,8 +434,8 @@ address {
 
 .projects-filtr {
   display: flex;
-  margin-bottom: 72px;
   justify-content: center;
+  margin-bottom: 72px;
 }
 
 .projects-item:not(:last-child) {
@@ -467,9 +472,9 @@ address {
 .projects-wrapper {
   padding-top: 32px;
   padding-bottom: 32px;
-  border: 1px solid var(--border-wrapper-color);
   padding-left: 16px;
 
+  border: 1px solid var(--border-wrapper-color);
   border-top: none;
 }
 
@@ -494,14 +499,16 @@ address {
 
 .overlay {
   position: absolute;
-  background-color: var(--secondary-color-accent);
-  color: var(--secondary-light-background);
+  display: block;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   padding: 40px 32px 0 32px;
-  display: block;
+
+  background-color: var(--secondary-color-accent);
+  color: var(--secondary-light-background);
+
   transform: translate(0, 100%);
   transition: transform var(--transition-dur-and-func);
 }
@@ -531,8 +538,8 @@ address {
 
 .footer-text {
   color: var(--secondary-text-color-dark-background);
-  margin-top: 16px;
   width: 264px;
+  margin-top: 16px;
 }
 
 .social-link-text {
@@ -543,12 +550,12 @@ address {
 
 .social-links-footer {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  align-items: center;
-  justify-content: center;
   transition: background-color var(--transition-dur-and-func);
 }
 
@@ -601,26 +608,26 @@ address {
   transform: translate(-50%, -50%);
   width: 408px;
   height: 576px;
+  border-radius: 4px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
   transform: opacity(100%);
   transition: transform var(--transition-dur-and-func);
 }
 
 .modal-close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 24px;
+  right: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: var(--secondary-text-color-dark-background);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--secondary-text-color-dark-background);
   padding: 0;
 }
 
