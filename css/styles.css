@@ -632,7 +632,8 @@ address {
   transition: background var(--transition-dur-and-func);
 }
 
-.modal-close-btn:hover {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
   background: var(--primary-color-accent);
 }
 
@@ -642,7 +643,8 @@ address {
   transition: fill var(--transition-dur-and-func);
 }
 
-.modal-close-btn:hover .modal-icon-btn {
+.modal-close-btn:hover .modal-icon-btn,
+.modal-close-btn:focus .modal-icon-btn {
   fill: var(--primary-text-color-dark-background);
 }
 
